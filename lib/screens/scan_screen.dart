@@ -5,6 +5,7 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 
 import '../api.dart';
 import '../offline_check.dart';
+import '../theme.dart';
 import 'login_screen.dart';
 
 class ScanScreen extends StatefulWidget {
@@ -143,11 +144,11 @@ class ResultScreen extends StatelessWidget {
       icon = Icons.error_outline;
       title = 'Could not check';
     } else if (r.isValid) {
-      color = Colors.green.shade700;
+      color = AppColors.green;
       icon = Icons.check_circle_rounded;
       title = 'VALID';
     } else {
-      color = Colors.red.shade700;
+      color = AppColors.red;
       icon = Icons.cancel_rounded;
       title = r.result.toUpperCase();
     }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'api.dart';
 import 'screens/login_screen.dart';
+import 'theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,10 +19,7 @@ class StationApp extends StatelessWidget {
     return MaterialApp(
       title: 'E-Season Inspector',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0A2558)),
-        useMaterial3: true,
-      ),
+      theme: buildTheme(),
       home: LoginScreen(api: api),
     );
   }
